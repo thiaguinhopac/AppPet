@@ -1,6 +1,6 @@
 # AppPet
 
-╔══════════════════ Nomes ══════════════════╗
+╔══════════════ Nomes ══════════════╗
   
     Gabriel Antonio Munck Pires da Cruz RA: 20990907
   
@@ -8,7 +8,7 @@
   
     Thiago Pacheco do Amaral            RA: 21294746
   
-╚════════════════════✦❖✦════════════════════╝
+╚══════════════✦❖✦══════════════╝
 
 
 Projeto desenvolvido para a disciplina de Computação para Dispositivos Moveis.
