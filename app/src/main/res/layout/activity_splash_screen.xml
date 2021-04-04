@@ -27,7 +27,7 @@
         android:layout_height="29dp"
         android:layout_marginStart="119dp"
         android:layout_marginEnd="118dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="68dp"
 
         android:max="100"
         android:progress="10"
@@ -43,9 +43,10 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/new_project__1_"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-54dp" />
+        android:layout_marginBottom="53dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/new_project__1___1_"
+        tools:layout_editor_absoluteX="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

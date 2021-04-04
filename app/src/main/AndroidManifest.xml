@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".screens.SplashScreen"></activity>
+        <activity android:name=".screens.payment.screensPayment.Pix"></activity>
+        <activity android:name=".screens.payment.screensPayment.Boleto" />
+        <activity android:name=".screens.payment.screensPayment.Card" />
+        <activity android:name=".screens.Products" />
+        <activity android:name=".screens.Bagage" />
+        <activity android:name=".screens.SplashScreen" />
         <activity android:name=".screens.payment.SelectPayment" />
-        <activity android:name=".screens.payment.Payment" />
         <activity android:name=".screens.Home" />
         <activity android:name=".Main">
             <intent-filter>

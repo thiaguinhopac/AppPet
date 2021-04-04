@@ -1,4 +1,4 @@
-package com.example.myapplication.screens.payment;
+package com.example.myapplication.screens.payment.screensPayment;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.myapplication.R;
 
-public class Payment extends AppCompatActivity {
+public class Pix extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment);
+        setContentView(R.layout.activity_pix);
     }
 }
