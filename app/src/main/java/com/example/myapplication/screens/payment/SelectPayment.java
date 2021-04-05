@@ -17,6 +17,7 @@ import com.example.myapplication.Main;
 import com.example.myapplication.R;
 import com.example.myapplication.entities.Animate;
 import com.example.myapplication.screens.SplashScreen;
+import com.example.myapplication.screens.payment.screensPayment.Pix;
 
 public class SelectPayment extends AppCompatActivity {
 
@@ -35,21 +36,11 @@ public class SelectPayment extends AppCompatActivity {
         viewx.setVisibility(View.INVISIBLE);
         ImageButton bt = findViewById(R.id.cardBtn);
         ImageButton bt1 = findViewById(R.id.bolBtn);
+        ImageButton bt2 = findViewById(R.id.pixBtn);
+
         final boolean[] b = {true};
-
-        bt.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                if(b[0]){
                     Animate.slideUp(viewx, l);
-                    b[0] = false;
-                } else {
-                    Animate.slideDown(viewx);
-                    b[0] = true;
-                }
-            }
-        });
+
 
         bt1.setOnClickListener(new View.OnClickListener() {
 
@@ -59,6 +50,13 @@ public class SelectPayment extends AppCompatActivity {
             }
         });
 
+        bt2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SelectPayment.this, Pix.class));
+            }
+        });
      //   requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
       //  getSupportActionBar().hide();
 

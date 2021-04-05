@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 
 import com.example.myapplication.screens.SplashScreen;
 import com.example.myapplication.screens.payment.SelectPayment;
+import com.example.myapplication.screens.payment.screensPayment.Pix;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
@@ -28,7 +29,7 @@ public class Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startActivity(new Intent(Main.this, SplashScreen.class));
+        startActivity(new Intent(Main.this, Pix.class));
 
     }
 
