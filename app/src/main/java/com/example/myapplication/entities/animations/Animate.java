@@ -1,9 +1,7 @@
-package com.example.myapplication.entities;
+package com.example.myapplication.entities.animations;
 
 import android.view.View;
 import android.view.animation.TranslateAnimation;
-
-import com.example.myapplication.R;
 
 public class Animate {
     public static void slideUp(View view, View l){

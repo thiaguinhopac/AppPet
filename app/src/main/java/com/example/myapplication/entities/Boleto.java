@@ -65,14 +65,5 @@ public class Boleto {
 
         // Para gerar um boleto em PDF
         gerador.geraPDF("BancoDoBrasil.pdf");
-
-        // Para gerar um boleto em PNG
-        gerador.geraPNG("BancoDoBrasil.png");
-
-        // Para gerar um array de bytes a partir de um PDF
-        byte[] bPDF = gerador.geraPDF();
-
-        // Para gerar um array de bytes a partir de um PNG
-        byte[] bPNG = gerador.geraPNG();
     }
 }

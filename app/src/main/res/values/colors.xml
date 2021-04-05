@@ -9,4 +9,15 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#528b8b</color>
     <color name="transparent">#00000000</color>
+    <color name="colorPrimaryDark">#321911</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <!-- Circle Page Indicator -->
+    <color name="default_circle_indicator_fill_color">@color/primary</color>
+    <color name="default_circle_indicator_page_color">@color/colorWhite</color>
+    <color name="default_circle_indicator_stroke_color">@android:color/transparent</color>
+
+
+
 </resources>

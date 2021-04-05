@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Circle Page Indicator -->
+    <integer name="default_circle_indicator_orientation">0</integer>
+
+</resources>

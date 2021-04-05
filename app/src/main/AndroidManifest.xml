@@ -4,14 +4,15 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
-        android:hardwareAccelerated="false"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".screens.payment.screensPayment.Pix"></activity>
+        <activity android:name=".screens.Delivery" />
+        <activity android:name=".screens.payment.screensPayment.Pix" />
         <activity android:name=".screens.payment.screensPayment.Boleto" />
         <activity android:name=".screens.payment.screensPayment.Card" />
         <activity android:name=".screens.Products" />

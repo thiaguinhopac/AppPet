@@ -7,7 +7,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ProgressBar;
 
-import com.example.myapplication.Main;
 import com.example.myapplication.R;
 import com.example.myapplication.screens.payment.SelectPayment;
 
@@ -19,7 +18,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
 
-        ProgressBar progressBar = (ProgressBar) findViewById(R.id.pb);
+        ProgressBar progressBar = findViewById(R.id.pb);
         Drawable draw = getDrawable(R.drawable.custom_progressbar);
 // set the drawable as progress drawable
         progressBar.setProgressDrawable(draw);

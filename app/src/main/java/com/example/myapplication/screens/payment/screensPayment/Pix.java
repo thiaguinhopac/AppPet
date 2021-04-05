@@ -12,8 +12,6 @@ import android.widget.ImageButton;
 
 import com.example.myapplication.R;
 import com.example.myapplication.screens.Home;
-import com.example.myapplication.screens.SplashScreen;
-import com.example.myapplication.screens.payment.SelectPayment;
 
 public class Pix extends AppCompatActivity {
 
@@ -25,31 +23,15 @@ public class Pix extends AppCompatActivity {
         ImageButton imgBtn = findViewById(R.id.cpyPix);
         ImageButton ret = findViewById(R.id.homeBtnPix);
 
-        ret.setOnClickListener(new View.OnClickListener() {
+        ret.setOnClickListener(view -> startActivity(new Intent(Pix.this, Home.class)));
 
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Pix.this, Home.class));
-            }
-        });
-
-        imgBtn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                setClipboard(getBaseContext(), "KSIFNVVYY24D0PKTV52789D0P0P");
-            }
-        });
+        imgBtn.setOnClickListener(view -> setClipboard(getBaseContext()));
     }
 
-    private void setClipboard(Context context, String text) {
-        if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB) {
-            android.text.ClipboardManager clipboard = (android.text.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-            clipboard.setText(text);
-        } else {
-            android.content.ClipboardManager clipboard = (android.content.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-            android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Pix", text);
-            clipboard.setPrimaryClip(clip);
-        }
+    private void setClipboard(Context context) {
+        ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText("Copied Pix", "KSIFNVVYY24D0PKTV52789D0P0P");
+        assert clipboard != null;
+        clipboard.setPrimaryClip(clip);
     }
 }
