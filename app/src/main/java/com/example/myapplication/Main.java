@@ -32,7 +32,6 @@ public class Main extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         LocalServer.load2ram(getApplicationContext());
         new Product();
         startActivity(new Intent(Main.this, Home.class));
