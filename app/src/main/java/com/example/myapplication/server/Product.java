@@ -7,11 +7,8 @@ import java.util.Map;
 
 public class Properties {
 
-    ArrayList<Bitmap> gridPhoto;
-
-    //   id         itens
-    Map<String, ArrayList<String>> buys;
-
-    ArrayList<Bitmap> products;
+    public static ArrayList<Bitmap> gridPhoto;
+    public static Map<String, ArrayList<String>> buys;
+    public static ArrayList<Bitmap> price;
 
 }
