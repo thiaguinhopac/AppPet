@@ -9,13 +9,15 @@ import android.graphics.Paint.Style;
 import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.v4.view.MotionEventCompat;
-import android.support.v4.view.ViewConfigurationCompat;
-import android.support.v4.view.ViewPager;
+
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
+
+import androidx.core.view.MotionEventCompat;
+import androidx.core.view.ViewConfigurationCompat;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.myapplication.R;
 import com.example.myapplication.interfaces.PageIndicator;
@@ -24,10 +26,6 @@ import static android.graphics.Paint.ANTI_ALIAS_FLAG;
 import static android.widget.LinearLayout.HORIZONTAL;
 import static android.widget.LinearLayout.VERTICAL;
 
-/**
- * Draws circles (one for each view). The current view position is filled and
- * others are only stroked.
- */
 public class CirclePageIndicator extends View implements PageIndicator {
     private static final int INVALID_POINTER = -1;
 
@@ -423,13 +421,8 @@ public class CirclePageIndicator extends View implements PageIndicator {
         mListener = listener;
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see android.view.View#onMeasure(int, int)
-     */
     @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    protected void onMeasure(int widthMeasureSpec ,int heightMeasureSpec) {
         if (mOrientation == HORIZONTAL) {
             setMeasuredDimension(measureLong(widthMeasureSpec), measureShort(heightMeasureSpec));
         } else {
@@ -437,13 +430,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
         }
     }
 
-    /**
-     * Determines the width of this view
-     *
-     * @param measureSpec
-     *            A measureSpec packed into an int
-     * @return The width of the view, honoring constraints from measureSpec
-     */
+
     private int measureLong(int measureSpec) {
         int result;
         int specMode = MeasureSpec.getMode(measureSpec);
@@ -465,13 +452,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
         return result;
     }
 
-    /**
-     * Determines the height of this view
-     *
-     * @param measureSpec
-     *            A measureSpec packed into an int
-     * @return The height of the view, honoring constraints from measureSpec
-     */
+
     private int measureShort(int measureSpec) {
         int result;
         int specMode = MeasureSpec.getMode(measureSpec);

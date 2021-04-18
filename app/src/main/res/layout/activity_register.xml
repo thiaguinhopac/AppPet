@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    android:backgroundTint="@color/teal_700"
+    tools:context=".screens.account.Register">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="345dp"
+                    android:layout_height="221dp"
+                    android:backgroundTint="@color/colorWhite"
+                    app:srcCompat="@drawable/new_project__1___1_" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/editTextTextNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="@color/colorWhite"
+                android:ems="10"
+                android:hint="nome"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <EditText
+                android:id="@+id/editTextTextCPF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="@color/colorWhite"
+                android:ems="10"
+                android:hint="cpf"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <EditText
+                android:id="@+id/editTextTextDataNasc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="@color/colorWhite"
+                android:ems="10"
+                android:hint="data de nascimento"
+                android:inputType="date"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <EditText
+                android:id="@+id/editTextTextEmailRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="@color/colorWhite"
+                android:ems="10"
+                android:hint="e-mail"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <EditText
+                android:id="@+id/editTextTextSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="@color/colorWhite"
+                android:ems="10"
+                android:hint="senha"
+                android:inputType="textPassword"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="415dp"
+        android:layout_height="744dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/new_project__2_" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="405dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="24dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/homeBtnBol"
+            android:layout_width="400dp"
+            android:layout_height="72dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/custom_button"
+            android:outlineAmbientShadowColor="@color/black"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="CADASTRAR"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

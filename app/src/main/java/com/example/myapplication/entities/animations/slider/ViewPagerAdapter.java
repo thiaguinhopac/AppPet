@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.myapplication.R;
 import com.squareup.picasso.Picasso;
@@ -17,25 +18,23 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class ImagePagerAdapter extends PagerAdapter {
+public class ViewPagerAdapter extends PagerAdapter {
 
     private Context context;
-    private List<Bitmap> images;
+    private LayoutInflater layoutInflater;
+    private ArrayList<Bitmap> images = new ArrayList<>();
 
-    public ImagePagerAdapter(Context context) {
+    public ViewPagerAdapter(Context context) {
         this.context = context;
-        this.images = new ArrayList<>();
-    }
-
-    public void setImages(List<Bitmap> images) {
-        this.images.addAll(images);
-        notifyDataSetChanged();
     }
 
     @Override
     public int getCount() {
         return images.size();
+    }
+
+    public void setImages(ArrayList<Bitmap> images) {
+        this.images = images;
     }
 
     @Override
@@ -44,21 +43,27 @@ public class ImagePagerAdapter extends PagerAdapter {
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
-        Bitmap image = images.get(position);
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    public Object instantiateItem(ViewGroup container, final int position) {
 
-        View itemView = inflater.inflate(R.layout.activity_main, container, false);
-        ImageView ivHeader = (ImageView) itemView.findViewById(R.id.iv_header);
+        layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = layoutInflater.inflate(R.layout.custom_layout, null);
+        ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
+        imageView.setImageBitmap(images.get(position));
 
-        ivHeader.setImageBitmap(image);
-        container.addView(itemView);
+        ViewPager vp = (ViewPager) container;
+        vp.addView(view, 0);
+        return view;
 
-        return itemView;
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((RelativeLayout) object);
+
+        ViewPager vp = (ViewPager) container;
+        View view = (View) object;
+        vp.removeView(view);
+
     }
+
+
 }

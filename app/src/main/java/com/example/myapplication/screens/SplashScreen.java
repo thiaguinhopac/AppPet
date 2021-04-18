@@ -20,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
 
         ProgressBar progressBar = findViewById(R.id.pb);
         Drawable draw = getDrawable(R.drawable.custom_progressbar);
-// set the drawable as progress drawable
+        // set the drawable as progress drawable
         progressBar.setProgressDrawable(draw);
 
         for (int x = 0; x < 100; x++){

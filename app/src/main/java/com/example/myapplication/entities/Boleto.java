@@ -63,7 +63,7 @@ public class Boleto {
 
 
 
-        // Para gerar um boleto em PDF
+
         gerador.geraPDF("BancoDoBrasil.pdf");
     }
 }
